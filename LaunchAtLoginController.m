@@ -96,7 +96,7 @@ LSSharedFileListItemRef copyItemWithURLinFileList(NSURL* wantedURL, LSSharedFile
         LSSharedFileListItemRemove(loginItems, appItem);
     }
     if (appItem) {
-        CFRetain(appItem);
+        CFRelease(appItem);
     }
 }
 
